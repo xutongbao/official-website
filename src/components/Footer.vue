@@ -1,7 +1,7 @@
 <template>
   <div id="footer" class="container-fluid">
     <div class="logo">
-      <img src="@/assets/img/logo_white.png" alt="logo图">
+      <img src="@/assets/img/logo_white.png" alt="logo图" />
     </div>
     <p class="title">公司企业网站模板</p>
     <p class="address_tel_fax">
@@ -13,6 +13,10 @@
       <span>邮箱：liyunkun_11@163.com</span>
       <span>公司微信号：ilyk_gg</span>
     </p>
+    <div class="m-record">
+      <span class="m-record1">京公安网备11010502045762号</span>
+      <span class="m-record2" @click="handleClick">京ICP备2021026507号-1</span>
+    </div>
     <p class="copy">Copyright &copy; 2018 - 2019 公司名称公司名称</p>
   </div>
 </template>
@@ -21,6 +25,11 @@ export default {
   name: "Footer",
   data() {
     return {};
+  },
+  methods: {
+    handleClick(evt) {
+      window.open("https://beian.miit.gov.cn", "_blank");
+    }
   }
 };
 </script>
@@ -54,8 +63,10 @@ export default {
 .copy {
   color: #d3d3d3;
   font-size: 14px;
-  margin: 50px 0 10px;
+  margin: 10px 0 50px;
 }
+.m-record{text-align: center;color: #d3d3d3;}
+.m-record2{margin: 0 0 0 5px;}
 @media screen and (max-width: 997px) {
   .title {
     font-size: 20px;
@@ -64,13 +75,11 @@ export default {
     font-size: 12px;
   }
   .email_wx {
-
-  font-size: 12px;
-}
-.copy {
-  font-size: 12px;
-  margin: 30px 0 10px;
-}
+    font-size: 12px;
+  }
+  .copy {
+    font-size: 12px;
+    margin: 30px 0 10px;
+  }
 }
 </style>
-

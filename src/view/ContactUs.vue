@@ -4,7 +4,7 @@
     <div class="container">
       <div class="container-fuild ContactUs-container">
         <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-6">
+          <div class="col-xs-12 col-sm-12 col-md-6" style="display:none;">
             <form class="form-horizontal" role="form">
               <div class="form-group">
                 <label for="name" class="col-sm-2 control-label">姓名</label>

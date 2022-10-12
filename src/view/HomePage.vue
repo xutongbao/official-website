@@ -34,8 +34,8 @@
           </h2>
           <p>当今最领先的响应式自助建站平台。无论您是普通互联网用户，还是专业网站制作人员，都能使用起飞页设计出最具专业水准的网站。想创建一个简单的单页式站点，还是一个专业的公司网站，亦或是一个别具一格的博客？起飞页可以满足您的所有需求。</p>
           <p>我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。无论您是普通互联网用户，还是专业网站制作人员。</p>
-          <h2 class="bigData-device">PC/PAD/Phone &nbsp; 全设备支持</h2>
-          <a href="#" class="btn btn-lg btn-block btn-info">联系我们</a>
+          <!-- <h2 class="bigData-device">PC/PAD/Phone &nbsp; 全设备支持</h2>
+          <a href="#" class="btn btn-lg btn-block btn-info">联系我们</a> -->
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@
       <div class="container contactUs-container wow slideInUp">
         <h1>您身边的IT专家</h1>
         <h3>7x24小时提供出色的IT服务</h3>
-        <button
+        <!-- <button
           class="btn btn-default btn-sm"
           onmouseleave="this.style.borderColor='#ffffff'; this.style.backgroundColor='#ffffff'; this.style.color='#3f3f3f';"
           onmouseenter="this.style.backgroundColor='transparent'; this.style.borderColor='#ffffff'; this.style.color='#ffffff';"
@@ -53,11 +53,11 @@
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </div> -->
       </div>
     </div>
     <!-- 客户评价 -->
-    <div id="customer" class="container-fuild">
+    <div id="customer" class="container-fuild" style="display:none;">
       <div class="container customer-container">
         <p class="customer-title text-center">客户评价</p>
         <div class="swiper-container customer-swiper hidden-xs">

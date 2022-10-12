@@ -10,8 +10,8 @@
           <span class="glyphicon glyphicon-time"></span>7x24小时为您服务
         </div>
         <div class="shejiao pull-right">
-          <span class="glyphicon glyphicon-hand-right"></span>赶快联系我们吧！
-          <span class="glyphicon glyphicon-hand-left"></span>
+          <!-- <span class="glyphicon glyphicon-hand-right"></span>赶快联系我们吧！
+          <span class="glyphicon glyphicon-hand-left"></span> -->
         </div>
       </div>
     </div>
@@ -92,30 +92,30 @@ export default {
           path: "/",
           children: []
         },
-        {
-          name: "软件产品",
-          path: "/software",
-          children: [
-            {
-              name: "智能小镇管理系统",
-              path: "/software/smartTown"
-            },
-            {
-              name: "大数据管理系统",
-              path: "/software/bigData"
-            }
-          ]
-        },
-        {
-          name: "相关服务",
-          path: "/service",
-          children: []
-        },
-        {
-          name: "新闻动态",
-          path: "/newsinformation",
-          children: []
-        },
+        // {
+        //   name: "软件产品",
+        //   path: "/software",
+        //   children: [
+        //     {
+        //       name: "智能小镇管理系统",
+        //       path: "/software/smartTown"
+        //     },
+        //     {
+        //       name: "大数据管理系统",
+        //       path: "/software/bigData"
+        //     }
+        //   ]
+        // },
+        // {
+        //   name: "相关服务",
+        //   path: "/service",
+        //   children: []
+        // },
+        // {
+        //   name: "新闻动态",
+        //   path: "/newsinformation",
+        //   children: []
+        // },
         {
           name: "公司介绍",
           path: "/companyintroduction",

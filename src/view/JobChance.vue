@@ -20,7 +20,7 @@
           <li>熟悉各种WEB缓存技术,熟悉大型网站构架和性能优化；</li>
           <li>对网站系统架构的部署、搭建、优化、排错等方面有丰富经验，对高负载、大访问量情况下的系统架构有经验者优先。</li>
         </ol>
-        <button class="center-block btn btn-warning btn-lg">投递简历</button>
+        <!-- <button class="center-block btn btn-warning btn-lg">投递简历</button> -->
       </div>
     </div>
   </div>
