@@ -65,7 +65,7 @@ export default {
   font-size: 14px;
   margin: 10px 0 50px;
 }
-.m-record{text-align: center;color: #d3d3d3;}
+.m-record{text-align: center;color: #d3d3d3;font-size: 12px;}
 .m-record2{margin: 0 0 0 5px;}
 @media screen and (max-width: 997px) {
   .title {

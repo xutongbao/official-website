@@ -7,10 +7,6 @@
           <div class="swiper-slide" v-for="(item,index) in swiperList" :key="index">
             <img class="swiper-lazy" :data-src="item.img" alt="轮播图">
             <div class="swiper-lazy-preloader"></div>
-            <div class="swiper-slide-title">
-                <h1>{{item.title}}</h1>
-                <p>{{item.content}}</p>
-            </div>
           </div>
         </div>
         <!-- 如果需要分页器 -->
@@ -146,25 +142,25 @@ export default {
           img: require("@/assets/img/banner1.png"),
           path: "",
           title: '您身边的IT专家1',
-          content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
+          content: '宣传简介宣传简介宣传简介',
         },
         {
           img: require("@/assets/img/banner2.jpg"),
           path: "",
           title: '您身边的IT专家2',
-          content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
+          content: '宣传简介宣传简介宣传简介',
         },
         {
           img: require("@/assets/img/banner1.png"),
           path: "",
           title: '您身边的IT专家3',
-          content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
+          content: '宣传简介宣传简介宣传简介',
         },
         {
           img: require("@/assets/img/banner2.jpg"),
           path: "",
           title: '您身边的IT专家4',
-          content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
+          content: '宣传简介宣传简介宣传简介',
         }
       ],
       customerList: [
