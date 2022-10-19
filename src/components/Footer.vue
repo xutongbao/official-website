@@ -3,21 +3,18 @@
     <div class="logo">
       <img src="@/assets/img/logo_white.png" alt="logo图" />
     </div>
-    <p class="title">公司企业网站模板</p>
     <p class="address_tel_fax">
-      <span>地址：公司地址公司地址公司地址公司地址</span>
-      <span>Tel：888-888-888</span>
-      <span>Fax：8888-88888888</span>
+      <span>{{$t('footer.address')}}</span>
+      <span>{{$t('footer.mobile')}}</span>
     </p>
     <p class="email_wx">
-      <span>邮箱：liyunkun_11@163.com</span>
-      <span>公司微信号：ilyk_gg</span>
+      <span>{{$t('footer.email')}}</span>
     </p>
     <div class="m-record">
-      <span class="m-record1">京公安网备11010502045762号</span>
+      <span class="m-record1">{{$t('footer.num1')}}</span>
       <span class="m-record2" @click="handleClick">京ICP备2021026507号-1</span>
     </div>
-    <p class="copy">Copyright &copy; 2018 - 2019 公司名称公司名称</p>
+    <p class="copy" v-html="$t('footer.copy')"></p>
   </div>
 </template>
 <script>

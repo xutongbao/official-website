@@ -2,6 +2,8 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import VueI18n from 'vue-i18n'
+import zhCN from '@/i18n/zh-CN.js'
 
 /* 路由 */
 import router from './router'
@@ -52,10 +54,26 @@ router.beforeEach((to, from, next) => {
     next();
 });
 
+Vue.use(VueI18n)
+
+
+const messages = {
+  'zh-CN': {...zhCN},
+}
+
+let currentLocale = localStorage.getItem('language_type') || 'zh-CN'
+
+const i18n = new VueI18n({
+  locale: currentLocale, // 设置地区
+  messages, // 设置地区信息
+})
+
+
 
 new Vue({
   el: '#app',
   router,
+  i18n,
   components: { App },
   template: '<App/>'
 })

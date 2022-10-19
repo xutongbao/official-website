@@ -5,9 +5,9 @@
     <div class="header-top container-fuild hidden-xs">
       <div class="container">
         <div class="server pull-left">
-          <span class="glyphicon glyphicon-earphone"></span>888-888-888
-          <span class="glyphicon glyphicon-envelope"></span>liyunkun_11@163.com
-          <span class="glyphicon glyphicon-time"></span>7x24小时为您服务
+          <span class="glyphicon glyphicon-earphone"></span>{{$t('header.mobile')}}
+          <span class="glyphicon glyphicon-envelope"></span>{{$t('header.email')}}
+          <span class="glyphicon glyphicon-time"></span>{{$t('header.service')}}
         </div>
         <div class="shejiao pull-right">
           <!-- <span class="glyphicon glyphicon-hand-right"></span>赶快联系我们吧！
@@ -19,24 +19,29 @@
     <div class="header-nav container hidden-xs">
       <!-- 导航logo -->
       <div class="header-nav-logo">
-        <img src="@/assets/img/logo_black.png">
+        <router-link to="/home" >
+          <img src="@/assets/img/logo_black.png" @click="navClick(0, '首页')"/>
+        </router-link>
       </div>
       <!-- 导航内容 -->
       <ul class="header-nav-wrapper">
         <li
-          v-for="(item,index) in navList"
+          v-for="(item, index) in navList"
           :key="index"
-          :class="index==navIndex?'active':''"
-          @click="navClick(index,item.name)"
+          :class="index == navIndex ? 'active' : ''"
+          @click="navClick(index, item.name)"
         >
           <router-link :to="item.path">
-            {{item.name}}
-            <span v-if="item.children.length>0" class="glyphicon glyphicon-menu-down"></span>
+            {{ item.name }}
+            <span
+              v-if="item.children.length > 0"
+              class="glyphicon glyphicon-menu-down"
+            ></span>
             <i class="underline"></i>
           </router-link>
-          <dl v-if="item.children.length>0">
-            <dt v-for="(i,n) in item.children" :key="n">
-              <router-link :to="i.path">{{i.name}}</router-link>
+          <dl v-if="item.children.length > 0">
+            <dt v-for="(i, n) in item.children" :key="n">
+              <router-link :to="i.path">{{ i.name }}</router-link>
             </dt>
           </dl>
         </li>
@@ -45,11 +50,15 @@
     <!-- 手机导航 -->
     <div class="header-nav-m container-fuild visible-xs">
       <div class="header-nav-m-logo">
-        <img class="center-block" src="@/assets/img/logo_black.png" alt="logo">
+        <img
+          class="center-block"
+          src="@/assets/img/logo_black.png"
+          alt="logo"
+        />
       </div>
       <!-- 导航栏 -->
       <div class="header-nav-m-menu text-center">
-        {{menuName}}
+        {{ menuName }}
         <div
           class="header-nav-m-menu-wrapper"
           data-toggle="collapse"
@@ -61,15 +70,15 @@
         <!-- 导航内容 -->
         <ul id="menu" class="header-nav-m-wrapper collapse">
           <li
-            v-for="(item,index) in navList"
+            v-for="(item, index) in navList"
             :key="index"
-            :class="index==navIndex?'active':''"
-            @click="navClick(index,item.name)"
+            :class="index == navIndex ? 'active' : ''"
+            @click="navClick(index, item)"
             data-toggle="collapse"
             data-target="#menu"
           >
             <router-link :to="item.path">
-              {{item.name}}
+              {{ item.name }}
               <i class="underline"></i>
             </router-link>
           </li>
@@ -83,12 +92,14 @@ export default {
   name: "Header",
   data() {
     return {
-      navIndex: sessionStorage.getItem('navIndex') ? sessionStorage.getItem('navIndex') : 0,
-      menuName: "首页",
+      navIndex: sessionStorage.getItem("navIndex")
+        ? sessionStorage.getItem("navIndex")
+        : 0,
+      menuName: this.$t('header.home'),
       menuClass: "glyphicon glyphicon-menu-down",
       navList: [
         {
-          name: "首页",
+          name: this.$t('header.home'),
           path: "/",
           children: []
         },
@@ -117,17 +128,17 @@ export default {
         //   children: []
         // },
         {
-          name: "公司介绍",
+          name: this.$t('header.companyIntro'),
           path: "/companyintroduction",
           children: []
         },
         {
-          name: "工作机会",
+          name: this.$t('header.jobChance'),
           path: "/jobchance",
           children: []
         },
         {
-          name: "联系我们",
+          name: this.$t('header.contactUs'),
           path: "/contactus",
           children: []
         }
@@ -135,10 +146,11 @@ export default {
     };
   },
   methods: {
-    navClick(index, name) {
+    navClick(index, item) {
       this.navIndex = index;
-      sessionStorage.setItem('navIndex',index)
-      this.menuName = name;
+      sessionStorage.setItem("navIndex", index);
+      this.menuName = item.name;
+      //this.$router.push(item.path);
     },
     menuClick() {
       if (this.menuClass == "glyphicon glyphicon-menu-down") {
